@@ -41,6 +41,14 @@
                         <div class="form-group">
                             <input type="file" class="form-control" name="image">
                         </div>
+
+                        <div class="form-group">
+                          <select name="category_id" class="form-control">
+                            @foreach($categories as $category)
+                              <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                          </select>
+                        </div>
                         
                         <div class="form-group text-center">
                             <button class="btn btn-primary">Submit</button>

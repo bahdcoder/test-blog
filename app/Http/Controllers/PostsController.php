@@ -42,6 +42,7 @@ class PostsController extends Controller
             'content' => 'required',
             'published_at' => 'required|date',
             'image' => 'required|image',
+            'category_id' => 'required',
         ]);
 
         $image = $request->image->store('posts');
@@ -51,7 +52,8 @@ class PostsController extends Controller
             'description' => $request->description,
             'content' => $request->content,
             'published_at' => $request->published_at,
-            'image' => $image
+            'image' => $image,
+            'category_id' => $request->category_id
         ]);
 
         session()->flash('status', 'Post Created Successfully.');

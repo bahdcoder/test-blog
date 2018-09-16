@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container my-5">
-        <h2 class="text-center">Bahdcoder's blog</h2>
+        <h2 class="text-center">Category: {{ $category->name }}</h2>
         <div class="row">
             <div class="col-md-8 my-5 offset-md-2">
                 @foreach($posts as $post)

@@ -19,5 +19,6 @@ Route::get('bahdcoder/secret/login', 'Auth\LoginController@showLoginForm');
 Route::post('/login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
+Route::get('/category/{name}', 'CategoryController@show');
 
 Route::get('/home', 'HomeController@index')->name('home');
