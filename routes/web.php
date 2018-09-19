@@ -20,5 +20,6 @@ Route::post('/login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/category/{name}', 'CategoryController@show');
+Route::get('/categories', 'CategoryController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');

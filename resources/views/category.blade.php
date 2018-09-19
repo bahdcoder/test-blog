@@ -10,6 +10,8 @@
 <body>
     <div class="container my-5">
         <h2 class="text-center">Category: {{ $category->name }}</h2>
+        <br>
+        <h1 class="text-center">{{ $category->created_at->toDayDateTimeString() }}</h1>
         <div class="row">
             <div class="col-md-8 my-5 offset-md-2">
                 @foreach($posts as $post)
